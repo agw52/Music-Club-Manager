@@ -93,6 +93,8 @@ Runnable wrongAnswerSwitchToMainActivity = new Runnable() {
         tabletGif = findViewById(R.id.tabletgif);
         signal = findViewById(R.id.helpsignal);
         studentArea = findViewById(R.id.helpstudentarea);
+        healthBar = findViewById(R.id.helphealthbar);
+        healthBar.setMax(room.student.teacher.maxHealth);
         button1 = findViewById(R.id.helpactivitybutton1);
         button2 = findViewById(R.id.helpactivitybutton2);
         button3 = findViewById(R.id.helpactivitybutton3);
@@ -102,8 +104,6 @@ Runnable wrongAnswerSwitchToMainActivity = new Runnable() {
                 "Increase Speaker Volume", "Provide Metronome", "Replace Sheet Music"));
         freeButtons = new ArrayList<>(Arrays.asList(button1, button2, button3, button4));
         if(savedInstanceState == null){
-            healthBar = findViewById(R.id.helphealthbar);
-            healthBar.setMax(room.student.teacher.maxHealth);
             healthBar.setProgress(room.student.teacher.maxHealth - room.student.teacher.health);
             studentArea.setImageResource(room.student.studentImage);
             TIME_LEFT_IN_MILLIS = 9000;
@@ -359,8 +359,6 @@ for(int i = 0; i < buttons.size(); i++){
             SoundPlayer.playSong(this, R.raw.straightfuse, songPosition);
         }
         if(answerTimer < 9 && savedInstanceState.getBoolean("buttonisclickable", false)){
-            healthBar = findViewById(R.id.helphealthbar);
-            healthBar.setMax(room.student.teacher.maxHealth);
             if(button1.getText().toString().equals(correctButtonText)){
                 setCorrectAnswerAction(button1);
                 setActionForWrongButtons(button1);
@@ -389,8 +387,6 @@ for(int i = 0; i < buttons.size(); i++){
             }
             startTimer();
         } else if(savedInstanceState.getBoolean("answercorrect", false)){
-            healthBar = findViewById(R.id.helphealthbar);
-            healthBar.setMax(room.student.teacher.maxHealth);
             adjustHealthForCorrectAnswer();
             increaseSatisfaction();
             button1.setClickable(false);
@@ -411,8 +407,6 @@ for(int i = 0; i < buttons.size(); i++){
                 } else{
                     room.student.teacher.health -= 15;
                 }
-                healthBar = findViewById(R.id.helphealthbar);
-                healthBar.setMax(room.student.teacher.maxHealth);
                 healthBar.setProgress(room.student.teacher.maxHealth - room.student.teacher.health);
                 if(satisfactionDecreased){
                     if(room.student.satisfaction.equals("Mediocre")){
