@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/timerbackground">
+    <shape android:shape="rectangle">
+        <corners android:radius="100dp"/>
+        <solid android:color="@color/white"/>
+    </shape>
+</item>
+    <item android:id="@+id/colorofprogress">
+        <clip android:clipOrientation="vertical" android:gravity="bottom">
+                <shape android:shape="rectangle">
+                    <corners android:radius="100dp"/>
+                    <solid android:color="@color/purple_500"/>
+                </shape>
+        </clip>
+    </item>
+</layer-list>

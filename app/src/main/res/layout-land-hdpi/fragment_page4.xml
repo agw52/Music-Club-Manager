@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Page4">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="50dp"
+        android:paddingBottom="35dp"
+        android:text="Help"
+        android:textSize="44sp"
+        android:fontFamily="cursive"
+        android:background="@drawable/speechbubble"
+        />
+    <ImageView
+        android:layout_width="369dp"
+        android:layout_height="240dp"
+        android:layout_marginLeft="382dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/helpscreen"
+        />
+    <TextView
+        android:layout_width="602dp"
+        android:layout_height="105dp"
+        android:text="During a lesson a table may call for help. As manager it's your responsibility to provide
+whatever the table asks for or there can be consequences. To help, click the speech bubble and select the appropriate
+answer on the next screen. Getting an answer right can benefit you greatly."
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:fontFamily="cursive"
+        android:layout_marginTop="373dp"
+        android:layout_marginLeft="106dp"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="60dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="523dp"
+        android:layout_marginLeft="12dp"
+        android:background="@drawable/leftarrow"
+        android:id="@+id/page4previousbutton"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="60dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="523dp"
+        android:layout_marginLeft="738dp"
+        android:rotation="180"
+        android:background="@drawable/leftarrow"
+        android:id="@+id/page4nextbutton"
+        />
+    <TextView
+        android:layout_width="40dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="523dp"
+        android:layout_marginLeft="388dp"
+        android:fontFamily="cursive"
+        android:text="4/9"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        />
+</FrameLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Page1">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_width="450dp"
+        android:layout_height="170dp"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/beginningtutorialimage"
+        />
+    <TextView
+        android:layout_width="620dp"
+        android:layout_height="100dp"
+        android:text="Music Club Manager is a management game based on a minigame from the Yakuza series called Cabaret Club Manager.
+ You play as the manager of a club where students come to take music lessons from teachers. Each student has a style of music and
+ instrument they want to play. As the manager, it's your responsibility to match students with an appropriate teacher."
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:fontFamily="cursive"
+        android:layout_marginTop="210dp"
+        android:layout_marginLeft="10dp"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="313dp"
+        android:layout_marginLeft="606dp"
+        android:background="@drawable/leftarrow"
+        android:rotation="180"
+        android:id="@+id/page1nextbutton"
+        />
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="313dp"
+        android:layout_marginLeft="315dp"
+        android:fontFamily="cursive"
+        android:text="1/9"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        />
+</FrameLayout>

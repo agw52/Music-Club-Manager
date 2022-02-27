@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Page5">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="252dp"
+        android:layout_height="87dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="73dp"
+        android:paddingBottom="20dp"
+        android:text="Trouble"
+        android:textSize="30sp"
+        android:fontFamily="cursive"
+        android:background="@drawable/speechbubble"
+        />
+    <ImageView
+        android:layout_width="156dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginLeft="299dp"
+        android:background="@drawable/pissedface"
+        />
+    <ImageView
+        android:layout_width="156dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginLeft="475dp"
+        android:background="@drawable/unhappyface"
+        />
+    <TextView
+        android:layout_width="582dp"
+        android:layout_height="82dp"
+        android:text="If a student is unsatisfied with the service they are getting, they may cause trouble.
+Having troublesome students can be detrimental to teachers. To resolve trouble, click on the speech bubble that
+pops up and on the next screen pick an appropriate answer."
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:fontFamily="cursive"
+        android:layout_marginTop="213dp"
+        android:layout_marginLeft="44dp"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="313dp"
+        android:layout_marginLeft="2dp"
+        android:background="@drawable/leftarrow"
+        android:id="@+id/page5previousbutton"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="313dp"
+        android:layout_marginLeft="606dp"
+        android:rotation="180"
+        android:background="@drawable/leftarrow"
+        android:id="@+id/page5nextbutton"
+        />
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="313dp"
+        android:layout_marginLeft="315dp"
+        android:fontFamily="cursive"
+        android:text="5/9"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        />
+</FrameLayout>

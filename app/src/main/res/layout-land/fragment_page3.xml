@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Page3">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_width="95dp"
+        android:layout_height="86dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/pissedface" />
+
+    <ImageView
+        android:layout_width="95dp"
+        android:layout_height="86dp"
+        android:layout_marginLeft="129dp"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/unhappyface" />
+
+    <ImageView
+        android:layout_width="95dp"
+        android:layout_height="86dp"
+        android:layout_marginLeft="243dp"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/straightface" />
+
+    <ImageView
+        android:layout_width="95dp"
+        android:layout_height="86dp"
+        android:layout_marginLeft="357dp"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/happyface" />
+
+    <ImageView
+        android:layout_width="95dp"
+        android:layout_height="86dp"
+        android:layout_marginLeft="471dp"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/stokedface" />
+
+    <TextView
+        android:layout_width="562dp"
+        android:layout_height="102dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="203dp"
+        android:fontFamily="cursive"
+        android:text="A student's satisfaction is indicated by the above facial expressions. Satisfaction, along with level of wealth, will determine how much money you'll make from a student.
+You'll want to give preferential treatment to wealthier students to make the most money."
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/page3previousbutton"
+        android:layout_width="46dp"
+        android:layout_height="23dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="359dp"
+        android:background="@drawable/leftarrow" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/page3nextbutton"
+        android:layout_width="46dp"
+        android:layout_height="23dp"
+        android:layout_marginLeft="560dp"
+        android:layout_marginTop="359dp"
+        android:background="@drawable/leftarrow"
+        android:rotation="180" />
+
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="21dp"
+        android:layout_marginLeft="294dp"
+        android:layout_marginTop="359dp"
+        android:fontFamily="cursive"
+        android:text="3/9"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+</FrameLayout>

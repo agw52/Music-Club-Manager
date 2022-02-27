@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Page6">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="252dp"
+        android:layout_height="87dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="73dp"
+        android:paddingBottom="20dp"
+        android:text="Check"
+        android:textSize="30sp"
+        android:fontFamily="cursive"
+        android:background="@drawable/speechbubble"
+        />
+    <ImageView
+        android:layout_width="307dp"
+        android:layout_height="127dp"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/checkscreen"
+        />
+    <TextView
+        android:layout_width="582dp"
+        android:layout_height="202dp"
+        android:text="When a lesson is over the table will call for the check. After clicking on the
+speech bubble you'll have four options: give the student a gift, thank the student, apologize to the
+student, or ask the student for a lesson extension. If the student wants to extend the lesson you get
+the opportunity to make more money off them. Giving students gifts can increase their satisfaction and
+influence them to leave a positive review, which in turn can lead to more business. Thanking students
+is similar to giving a gift except you don't have to pay for anything and you won't gain as many fans.
+Apologizing is a good option at the end of a lesson if a student was unsatisfied with their service and
+you want to avoid a negative review."
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:fontFamily="cursive"
+        android:layout_marginTop="156dp"
+        android:layout_marginLeft="42dp"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="313dp"
+        android:layout_marginLeft="2dp"
+        android:background="@drawable/leftarrow"
+        android:id="@+id/page6previousbutton"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="313dp"
+        android:layout_marginLeft="606dp"
+        android:rotation="180"
+        android:background="@drawable/leftarrow"
+        android:id="@+id/page6nextbutton"
+        />
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="313dp"
+        android:layout_marginLeft="315dp"
+        android:fontFamily="cursive"
+        android:text="6/9"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        />
+</FrameLayout>

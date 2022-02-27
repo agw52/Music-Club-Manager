@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Page7">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_height="130dp"
+        android:layout_width="300dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/swap"
+        />
+    <TextView
+        android:layout_width="562dp"
+        android:layout_height="180dp"
+        android:text="If you're in a situation where an assigned teacher is starting to get very tired, or their student
+simply is not satisfied with them, you have an option to switch the assigned teacher. There are two ways to do this. First
+tap on the image of the teacher you want to switch out. Then you can either drag a new teacher from the top of the screen to
+the space of the old teacher, or tap on the image of another assigned teacher and then tap the button that subsequently covers
+their image. Both of these methods allow you to see a preview of the student's satisfaction with their new teacher, which
+should help you in your decision making."
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:fontFamily="cursive"
+        android:layout_marginTop="153dp"
+        android:layout_marginLeft="24dp"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="46dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="359dp"
+        android:layout_marginLeft="9dp"
+        android:background="@drawable/leftarrow"
+        android:id="@+id/page7previousbutton"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="46dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="359dp"
+        android:layout_marginLeft="560dp"
+        android:background="@drawable/leftarrow"
+        android:rotation="180"
+        android:id="@+id/page7nextbutton"
+        />
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="359dp"
+        android:layout_marginLeft="294dp"
+        android:fontFamily="cursive"
+        android:text="7/9"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        />
+</FrameLayout>

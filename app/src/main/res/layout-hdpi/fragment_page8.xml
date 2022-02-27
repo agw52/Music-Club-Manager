@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Page8">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_height="214dp"
+        android:layout_width="50dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="38dp"
+        android:background="@drawable/partybar"
+        />
+    <TextView
+        android:layout_width="342dp"
+        android:layout_height="263dp"
+        android:text="The bar on the right side of the screen fills as you make more money.
+The first line from the bottom of the bar indicates the point at which you will be able to click the button
+below the bar, which will activate party mode. Party mode greatly increases the satisfaction of students
+and influences them to spend much more money, regardless of their satisfaction prior. The second line from
+the bottom of the bar indicates when party mode will reach level two, where more tables are effected by party
+mode. Finally, when the bar is completely full, clicking the yellow button will put all available tables into
+party mode."
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:fontFamily="cursive"
+        android:layout_marginTop="260dp"
+        android:layout_marginLeft="15dp"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="30dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="533dp"
+        android:layout_marginLeft="9dp"
+        android:background="@drawable/leftarrow"
+        android:id="@+id/page8previousbutton"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="30dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="533dp"
+        android:layout_marginLeft="321dp"
+        android:background="@drawable/leftarrow"
+        android:rotation="180"
+        android:id="@+id/page8nextbutton"
+        />
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="533dp"
+        android:layout_marginLeft="168dp"
+        android:fontFamily="cursive"
+        android:text="8/9"
+        android:textSize="19sp"
+        android:textColor="@color/black"
+        />
+</FrameLayout>

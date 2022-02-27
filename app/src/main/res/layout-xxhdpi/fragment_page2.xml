@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Page2">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="149dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="51dp"
+        android:background="@drawable/stathighlight"
+        />
+    <TextView
+        android:layout_width="342dp"
+        android:layout_height="273dp"
+        android:text="When a student spawns, click on the empty square space to their left and you will be able to assign them a teacher.
+If you drag the teacher's image over this space and hold it there the student's preferred music style and instrument will be highlighted.
+You can also see how skilled a teacher is in certain areas and how happy or unhappy a student will be with that teacher. If you've started
+to drag a teacher and then decided against assigning them, just drag them back off the empty area and remove your finger from the screen.
+To assign teachers, drop them while their image is hovering over the empty area."
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:fontFamily="cursive"
+        android:layout_marginTop="213dp"
+        android:layout_marginLeft="9dp"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="30dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="492dp"
+        android:layout_marginLeft="9dp"
+        android:background="@drawable/leftarrow"
+        android:id="@+id/page2previousbutton"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="30dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="492dp"
+        android:layout_marginLeft="321dp"
+        android:background="@drawable/leftarrow"
+        android:rotation="180"
+        android:id="@+id/page2nextbutton"
+        />
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="494dp"
+        android:layout_marginLeft="168dp"
+        android:fontFamily="cursive"
+        android:text="2/9"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        />
+</FrameLayout>
