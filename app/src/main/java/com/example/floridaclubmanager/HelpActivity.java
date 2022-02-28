@@ -30,7 +30,7 @@ Button button1, button2, button3, button4;
 ProgressBar partyBar, healthBar;
 CountDownTimer helpCountDownTimer;
 long TIME_LEFT_IN_MILLIS;
-int answerTimer, songPosition;
+int answerTimer, songPosition, studentImageToDisplayOnOrientationChange;
 int sounds[];
 boolean satisfactionDecreased, lateAnswer, increasedToStoked, returningToMainActivity;
 String correctButtonText;
@@ -188,13 +188,27 @@ private void increaseSatisfaction(){
     if(lateAnswer == false) {
         if (room.student.satisfaction.equals("Unsatisfied")) {
             studentArea.setImageResource(R.drawable.straightface);
+            studentImageToDisplayOnOrientationChange = R.drawable.straightface;
         } else if (room.student.satisfaction.equals("Mediocre")) {
             studentArea.setImageResource(R.drawable.happyface);
+            studentImageToDisplayOnOrientationChange = R.drawable.happyface;
         } else if (room.student.satisfaction.equals("Happy")) {
             increasedToStoked = true;
             answerIntent.putExtra("increasedtostoked", increasedToStoked);
             studentArea.setImageResource(R.drawable.stokedface);
+            studentImageToDisplayOnOrientationChange = R.drawable.stokedface;
         }
+    } else{
+        if(room.student.satisfaction.equals("Unsatisfied")){
+            studentImageToDisplayOnOrientationChange = R.drawable.unhappyface;
+        } else if(room.student.satisfaction.equals("Mediocre")){
+            studentImageToDisplayOnOrientationChange = R.drawable.straightface;
+        } else if(room.student.satisfaction.equals("Happy")){
+            studentImageToDisplayOnOrientationChange = R.drawable.happyface;
+        }
+    }
+    if(room.student.satisfaction.equals("Stoked")){
+        studentImageToDisplayOnOrientationChange = R.drawable.stokedface;
     }
 answerIntent.putExtra("lateanswer", lateAnswer);
 answerIntent.putExtra("room", room.roomNumber);
@@ -220,6 +234,15 @@ private void wrongAnswerAction(long returnToMainDelay){
     button2.setClickable(false);
     button3.setClickable(false);
     button4.setClickable(false);
+    if(room.student.satisfaction.equals("Unsatisfied")){
+        studentImageToDisplayOnOrientationChange = R.drawable.unhappyface;
+    } else if(room.student.satisfaction.equals("Mediocre")){
+        studentImageToDisplayOnOrientationChange = R.drawable.straightface;
+    } else if(room.student.satisfaction.equals("Happy")){
+        studentImageToDisplayOnOrientationChange = R.drawable.happyface;
+    } else{
+        studentImageToDisplayOnOrientationChange = R.drawable.stokedface;
+    }
     int satisfactionDecreaseChance = (int) (Math.random() * 10) + 1;
     if(satisfactionDecreaseChance <= 7){
         answerIntent.putExtra("healthdecrease", 15);
@@ -233,10 +256,13 @@ private void wrongAnswerAction(long returnToMainDelay){
             satisfactionDecreased = true;
             if(room.student.satisfaction.equals("Mediocre")){
                 studentArea.setImageResource(R.drawable.unhappyface);
+                studentImageToDisplayOnOrientationChange = R.drawable.unhappyface;
             } else if(room.student.satisfaction.equals("Happy")){
                 studentArea.setImageResource(R.drawable.straightface);
+                studentImageToDisplayOnOrientationChange = R.drawable.straightface;
             } else{
                 studentArea.setImageResource(R.drawable.happyface);
+                studentImageToDisplayOnOrientationChange = R.drawable.happyface;
             }
         }
     }
@@ -264,7 +290,7 @@ for(int i = 0; i < buttons.size(); i++){
     @Override
     protected void onPause() {
         super.onPause();
-        if(answerTimer != 9){
+        if(answerTimer != 9 && button1.isClickable()){
             helpCountDownTimer.cancel();
         }
         if(returningToMainActivity == false){
@@ -318,6 +344,7 @@ for(int i = 0; i < buttons.size(); i++){
         outState.putBoolean("satisfactiondrop", satisfactionDecreased);
         outState.putBoolean("returningtomainactivity", returningToMainActivity);
         outState.putBoolean("improvedtostoked", increasedToStoked);
+        outState.putInt("displayonorientationchange", studentImageToDisplayOnOrientationChange);
         outState.putCharSequence("button1text", button1.getText());
         outState.putCharSequence("button2text", button2.getText());
         outState.putCharSequence("button3text", button3.getText());
@@ -346,6 +373,7 @@ for(int i = 0; i < buttons.size(); i++){
         answerTimer = savedInstanceState.getInt("answertimer", 0);
         correctButtonText = savedInstanceState.getString("correctbuttontext");
         lateAnswer = savedInstanceState.getBoolean("answercorrect", false);
+        studentImageToDisplayOnOrientationChange = savedInstanceState.getInt("displayonorientationchange", 0);
         satisfactionDecreased = savedInstanceState.getBoolean("satisfactiondrop", satisfactionDecreased);
         returningToMainActivity = savedInstanceState.getBoolean("returningtomainactivity", false);
         increasedToStoked = savedInstanceState.getBoolean("improvedtostoked", false);
@@ -359,6 +387,7 @@ for(int i = 0; i < buttons.size(); i++){
             SoundPlayer.playSong(this, R.raw.straightfuse, songPosition);
         }
         if(answerTimer < 9 && savedInstanceState.getBoolean("buttonisclickable", false)){
+            studentArea.setImageResource(room.student.studentImage);
             if(button1.getText().toString().equals(correctButtonText)){
                 setCorrectAnswerAction(button1);
                 setActionForWrongButtons(button1);
@@ -389,6 +418,7 @@ for(int i = 0; i < buttons.size(); i++){
         } else if(savedInstanceState.getBoolean("answercorrect", false)){
             adjustHealthForCorrectAnswer();
             increaseSatisfaction();
+            studentArea.setImageResource(studentImageToDisplayOnOrientationChange);
             button1.setClickable(false);
             button2.setClickable(false);
             button3.setClickable(false);
@@ -408,15 +438,7 @@ for(int i = 0; i < buttons.size(); i++){
                     room.student.teacher.health -= 15;
                 }
                 healthBar.setProgress(room.student.teacher.maxHealth - room.student.teacher.health);
-                if(satisfactionDecreased){
-                    if(room.student.satisfaction.equals("Mediocre")){
-                        studentArea.setImageResource(R.drawable.unhappyface);
-                    } else if(room.student.satisfaction.equals("Happy")){
-                        studentArea.setImageResource(R.drawable.straightface);
-                    } else{
-                        studentArea.setImageResource(R.drawable.happyface);
-                    }
-                }
+                studentArea.setImageResource(studentImageToDisplayOnOrientationChange);
             }
             answerIntent.putExtra("satisfactiondecrease", satisfactionDecreased);
             answerIntent.putExtra("room", room.roomNumber);
