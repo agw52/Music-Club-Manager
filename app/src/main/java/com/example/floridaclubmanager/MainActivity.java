@@ -689,9 +689,7 @@ private static int determineQuickSpawnTime(int fans){
                 room.student.displayPreferredStyle(room);
             }
             resumeGame();
-            if(room.previewed){
-                room.teacherAreaClicked = false;
-            }
+            room.teacherAreaClicked = false;
         }
     }
     private void enterDragAction(Teacher teacher, View teacherArea){
