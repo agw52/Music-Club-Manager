@@ -556,7 +556,9 @@ private static int determineQuickSpawnTime(int fans){
         }
         for (Room room : rooms){
             if(room.teacherAreaClicked){
-                room.teacherAreaClicked = false;
+                if(room.previewed == false){
+                    room.teacherAreaClicked = false;
+                }
                 room.space.setBackgroundResource(R.drawable.alternativetable);
                 room.space.setScaleX(0.77f);
                 room.space.setScaleY(0.64f);
@@ -687,6 +689,9 @@ private static int determineQuickSpawnTime(int fans){
                 room.student.displayPreferredStyle(room);
             }
             resumeGame();
+            if(room.previewed){
+                room.teacherAreaClicked = false;
+            }
         }
     }
     private void enterDragAction(Teacher teacher, View teacherArea){
@@ -994,6 +999,7 @@ room.progressBar.setProgressDrawable(room.normalProgressBar.getProgressDrawable(
         resumeGame();
         for(int i = 0; i < returnAllOtherRooms(room).length; i++){
             if(returnAllOtherRooms(room)[i].teacherAreaClicked){
+                returnAllOtherRooms(room)[i].teacherAreaClicked = false;
                 returnAllOtherRooms(room)[i].teacherArea.setImageResource(room.student.teacher.teacherImage);
                 room.teacherArea.setImageResource(returnAllOtherRooms(room)[i].student.teacher.teacherImage);
                 room.student.setTeacher(returnAllOtherRooms(room)[i].student.teacher);
@@ -1698,7 +1704,10 @@ room.hasTeacher = false;
         if(returningFromActivity){
             returningFromActivity = false;
         } else{
-            resumeGame();
+            if(room1.teacherAreaClicked == false && room2.teacherAreaClicked == false && room3.teacherAreaClicked == false &&
+                    room4.teacherAreaClicked == false && room5.teacherAreaClicked == false && room6.teacherAreaClicked == false){
+                resumeGame();
+            }
             background.start();
             background.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                 @Override
