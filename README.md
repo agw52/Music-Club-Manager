@@ -17,4 +17,4 @@ Mobile app based on the cabaret club management mini-game from the Yakuza series
 
 ![Screenshot_20220227-225541](https://user-images.githubusercontent.com/36110651/156053229-a0e95a14-4431-4c15-88d6-3d0e383192ab.jpg)
 
-Install the APK: https://drive.google.com/file/d/1DBbVltSIDJMrRmMZHckeq5gx9dPVYFOG/view?usp=sharing
+Get the app from Google Play Store: https://play.google.com/store/apps/details?id=com.musicclubmanager.floridaclubmanager
